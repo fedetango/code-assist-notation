@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>code-assist-notation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
+      color: #222;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+    }
+    p {
+      font-size: 1.4em;
+      margin-bottom: 1em;
+    }
+    .box {
+      background: rgba(255,255,255,0.95);
+      padding: 2.5em 2em;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+      text-align: center;
+      max-width: 420px;
+    }
+    .random {
+      color: #6f86d6;
+      font-weight: bold;
+      font-size: 1.3em;
+      margin: 1em 0 0.5em 0;
+      letter-spacing: 1px;
+    }
+    .footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #444a;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>¡Bienvenido!</h1>
+    <p>Este es un sitio web aleatorio generado para<br><strong>fedetango/code-assist-notation</strong></p>
+    <div class="random">
+      Sorpresa aleatoria: <span id="rnd"></span>
+    </div>
+  </div>
+  <div class="footer">
+    Powered by <a href="https://github.com/fedetango/code-assist-notation" target="_blank" rel="noopener">code-assist-notation</a>
+  </div>
+  <script>
+    // Mensaje aleatorio
+    const mensajes = [
+      "¡Sigue creando!",
+      "Hoy es un gran día para programar.",
+      "¿Probaste ya GitHub Copilot?",
+      "¡Explora, innova, comparte!",
+      "La mejor idea es la próxima.",
+      "¡El código es poesía!",
+      "Haz commit a tus sueños.",
+      "Keep calm & code on.",
+      "¡Gracias por visitar!"
+    ];
+    document.getElementById("rnd").textContent = mensajes[Math.floor(Math.random() * mensajes.length)];
+  </script>
+</body>
+</html>
